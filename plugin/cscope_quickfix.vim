@@ -2,11 +2,11 @@
 " Author: kino
 " Version: 0.1
 " Last Modified: Dec. 30, 2003
-" 
+"
 " Overview
 " ------------
 " This script enables to use cscope with quickfix.
-" 
+"
 " Preparation
 " ------------
 " You must prepare cscope and cscope database (cscope.out file).
@@ -15,7 +15,7 @@
 " If you don't know about cscope, see:
 " :help cscope
 " http://cscope.sourceforge.net/
-" 
+"
 " Feature 1
 " ------------
 " This script adds a command ":Cscope", which is very similar to ":cscope find"
@@ -68,21 +68,21 @@
 "
 " Install
 " -------------
-" Copy cscope_quickfix.vim file to plugin directory. 
+" Copy cscope_quickfix.vim file to plugin directory.
 " If you don't want to open quickfix window after :Cscope command, put a line
-" in .vimrc like: 
-" let Cscope_OpenQuickfixWindow = 0 
+" in .vimrc like:
+" let Cscope_OpenQuickfixWindow = 0
 " If you don't want to jump first item after :Cscope command, put a line
-" in .vimrc like: 
+" in .vimrc like:
 " let Cscope_JumpError = 0
 " If you don't want to use keymap for :Cscope command, put a line in .vimrc
-" like: 
+" like:
 " let Cscope_Keymap = 0
 " If you want to use Popup menu for :Cscope command, put a line in .vimrc
-" like: 
+" like:
 " let Cscope_PopupMenu = 1
 " If you don't want to use Tools menu for :Cscope command, put a line in .vimrc
-" like: 
+" like:
 " let Cscope_ToolsMenu = 0
 "
 if !exists("Cscope_OpenQuickfixWindow")
@@ -146,8 +146,8 @@ function! s:RunCscope(...)
 	let cmd_output = system(cmd)
 
 	if cmd_output == ""
-		echohl WarningMsg | 
-		\ echomsg "Error: Pattern " . pattern . " not found" | 
+		echohl WarningMsg |
+		\ echomsg "Error: Pattern " . pattern . " not found" |
 		\ echohl None
 		return
 	endif
